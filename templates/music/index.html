@@ -7,7 +7,9 @@
 <h3>here is all my albums:</h3><br>
 <ul>
 	{% for album in all_albums %}
-	<li><a href="/music/{{album.id}}/">{{album.album_title}}</a></li>
+	<!-- <li><a href="/music/{{album.id}}/">{{album.album_title}}</a></li> -->
+	<li>
+	<a href="{% url 'music:detail' album.id %}"></a></ul></li>
 	{% endfor %}
 </ul>
 {% else %}

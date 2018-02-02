@@ -16,5 +16,7 @@ class Song(models.Model):
 	file_type=models.CharField(max_length=10)
 	song_title=models.CharField(max_length=50)
 	is_favorite=models.BooleanField(default=False)
+	
+
 	def __str__(self):
 		return self.song_title

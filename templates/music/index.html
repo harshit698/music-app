@@ -3,6 +3,26 @@
 <head>
 </head>
 <body>
+
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{ % static 'music/style.css' %}">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar=toggle">Album</button>
+			<a class="nav-brand" href="{% url 'music:index' %}"></a>
+		</div>
+	</div>
+</nav>
 {% if all_albums %}
 <h3>here is all my albums:</h3><br>
 <ul>
